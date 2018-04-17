@@ -1,5 +1,5 @@
 {
-  "name": "raspi-sensor-ads1x15",
+  "name": "raspi-kit-ads1x15",
   "version": "1.0.0",
   "description": "Analog to Digital converter library for ADS1015 and ADS1115",
   "main": "ADS1x15.js",
