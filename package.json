@@ -1,0 +1,50 @@
+{
+  "name": "raspi-sensor-ads1x15",
+  "version": "1.0.0",
+  "description": "Analog to Digital converter library for ADS1015 and ADS1115",
+  "main": "ADS1x15.js",
+  "scripts": {
+    "clean": "rm -rf .nyc_output coverage",
+    "test": "node_modules/.bin/mocha -R spec test",
+    "cover": "node_modules/.bin/nyc node_modules/mocha/bin/_mocha --exit",
+    "lint": "node_modules/.bin/eslint .",
+    "report": "npm run cover && npm run lint"
+  },
+  "keywords": [
+    "ADS1115",
+    "ADS1015",
+    "ADS1x15",
+    "ADC",
+    "Analog to Digital",
+    "Raspi-Kit",
+    "I2C"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kfitzgerald/raspi-kit-ads1x15.git"
+  },
+  "author": "Kevin M. Fitzgerald",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.0"
+  },
+  "peerDependencies": {
+    "raspi": ">= 5",
+    "raspi-i2c": ">= 6"
+  },
+  "devDependencies": {
+    "commander": "^2.15.1",
+    "eslint": "^4.19.1",
+    "faux-i2c": "^1.0.0",
+    "mocha": "^5.1.0",
+    "nyc": "^11.6.0",
+    "should": "^13.2.1"
+  },
+  "nyc": {
+    "reporter": [
+      "text-summary",
+      "html",
+      "lcovonly"
+    ]
+  }
+}
